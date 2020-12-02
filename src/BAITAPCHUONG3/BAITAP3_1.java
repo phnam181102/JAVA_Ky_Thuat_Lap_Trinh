@@ -1,4 +1,4 @@
-package BAITAPCHUONG3;
+package BaiTapChuong3;
 
 import java.sql.SQLOutput;
 import java.util.Scanner;

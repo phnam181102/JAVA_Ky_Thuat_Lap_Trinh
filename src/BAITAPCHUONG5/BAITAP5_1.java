@@ -1,4 +1,4 @@
-package BAITAPCHUONG5;
+package BaiTapChuong5;
 
 import java.util.Scanner;
 

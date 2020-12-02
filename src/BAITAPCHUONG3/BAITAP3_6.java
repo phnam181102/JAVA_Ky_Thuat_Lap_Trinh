@@ -1,4 +1,4 @@
-package BAITAPCHUONG3;
+package BaiTapChuong3;
 
 public class BAITAP3_6 {
     public static void main(String[] args) {

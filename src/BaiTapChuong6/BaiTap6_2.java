@@ -15,7 +15,6 @@ public class BaiTap6_2 {
             System.out.println("\n"+result);
     }
     static int P(int n) {
-        int answer = 1;
         if (n == 0) {
             return 1;
         } else

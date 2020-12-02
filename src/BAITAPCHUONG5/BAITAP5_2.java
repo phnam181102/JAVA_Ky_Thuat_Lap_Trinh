@@ -1,6 +1,5 @@
-package BAITAPCHUONG5;
+package BaiTapChuong5;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class BAITAP5_2 {
