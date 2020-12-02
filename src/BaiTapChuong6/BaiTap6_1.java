@@ -26,6 +26,7 @@ public class BaiTap6_1 {
 //        }
 //        return a;
 //    }
+    // Tim uoc chung lon nhat
     static int UCLN (int a, int b) {
         while (a != b) {
             if (a > b) {
