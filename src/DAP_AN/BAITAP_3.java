@@ -17,20 +17,30 @@ import java.util.Scanner;
 public class BAITAP_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //nhập n từ bàn phím
+        System.out.print("Nhap kich thuoc cua mang: ");
         int n = sc.nextInt();
+        System.out.println("");
+
+        //khởi tạo mảng a với kích thước n phần tử
         int[] a = new int[n];
+
+        //nhập giá trị cho các phần tử trong mảng a
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
 
+        //khởi tạo biến đếm, gán giá trị ban đầu = 0
         int dem = 0;
 
+        //đếm số lần a[i] chia hết cho j (j chạy từ 1 - a[i])
         for (int i = 0; i < n ; i++) {
             for (int j = 1; j <= a[i]; j++) {
                 if (a[i] % j == 0) {
                     dem++;
                 }
             }
+            //nếu = 2 thì là số nguyên tố
             if (dem == 2) {
                 System.out.print(a[i]+ " ");
             }

@@ -1,21 +1,32 @@
-//https://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_thu%E1%BA%ADt_Euclid
-import java.util.Scanner;
+/* This is my Exception class, I have named it MyException
+ * you can give any name, just remember that it should, extend Exception class
+ */
+class MyException extends Exception{
+    String str1;
+    /* Constructor of custom exception class
+     * here I am copying the message that we are passing while
+     * throwing the exception to a string and then displaying
+     * that string along with the message.
+     */
 
-public class TEST {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String J = sc.next();
-        String S = sc.next();
-        numJewelsInStones(J, S);
+    MyException(String str2) {
+        str1=str2;
     }
-    static void numJewelsInStones(String J, String S) {
-        int count = 0;
-        for (int i = 0; i < J.length(); i++) {
-            for (int j = 0; j < S.length(); j++) {
-                if (J.charAt(i) == S.charAt(j))
-                    count++;
-            }
+    public String toString(){
+        return ("MyException Occurred: "+str1) ;
+    }
+}
+public String(String name);
+class Vidu7_8{
+    public static void main(String args[]){
+        try{
+            System.out.println("Starting of try block");
+// I'm throwing the custom exception using throw
+            throw new MyException("This is My error Message");
         }
-        System.out.println(count);
+        catch(MyException exp){
+            System.out.println("Catch Block") ;
+            System.out.println(exp) ;
+        }
     }
 }

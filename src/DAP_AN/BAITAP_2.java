@@ -16,19 +16,22 @@ import java.util.Scanner;
 public class BAITAP_2 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-
+        //nhập n từ bàn phím
         System.out.print("Nhap n: ");
         int n = sc.nextInt();
 
+        //khai báo mảng a với kích thước (n+1) phần tử
         int[] a = new int[n+1];
 
         System.out.println("");
 
+        //nhập giá trị cho cho các phần tử từ 0 - n
         for(int i = 0; i < n; i++) {
             System.out.print("Nhap gia tri cho phan tu [" + i + "]: ");
             a[i] = sc.nextInt();
         }
 
+        //nhập k và x từ bàn phím
         System.out.print("\nNhap k: ");
         int k = sc.nextInt();
         System.out.print("\nNhap x: ");
@@ -36,7 +39,7 @@ public class BAITAP_2 {
 
         System.out.println("");
 
-        //nên nhắn tin riêng nếu vẫn chưa hiểu đoạn code phía dưới
+        //không quan tâm các phần tử từ 0 đến (k-1), dời các phần tử từ k đến n lui 1 ô, thêm x vào vị trí a[i] (k=i)
         for (int i = n; i >= k; i--) {
             if (i == k){
                 a[i] = x;
@@ -45,6 +48,7 @@ public class BAITAP_2 {
             }
         }
 
+        //in ra màn hình
         System.out.println("Ket qua:");
         for (int i= 0; i <= n; i++) {
             System.out.print(a[i]+" ");

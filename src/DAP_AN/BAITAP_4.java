@@ -20,29 +20,37 @@ import java.util.Scanner;
 public class BAITAP_4 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+        //nhập n từ bàn phím, khai báo mảng a có kích thước n phần tử
+        System.out.print("Nhap n: ");
         int n = sc.nextInt();
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
 
+        //nhập m từ bàn phím, khai báo mảng b có kích thước m phần tử
+        System.out.print("\nNhap m: ");
         int m = sc.nextInt();
         int[] b = new int[m];
         for (int i = 0; i < m; i++) {
             b[i] = sc.nextInt();
         }
 
-        //nên nhắn tin riêng nếu vẫn chưa hiểu đoạn code phía dưới
+        //khởi tạo mảng a với kích thước là e = (m+n) phần tử
         int e = n+m;
         int[] c = new int[e];
+
+        //gán giá trị cho các phần tử từ 0 - (n-1) của mảng c từ các phần tử trong mảng a
         for (int i = 0; i < n; i++) {
             c[i] = a[i];
         }
+
+        //gán giá trị cho các phần tử còn lại trong mảng c từ các phần tử trong mảng b
         for (int i = n; i < e; i++) {
             c[i] = b[i-n];
         }
 
-
+        //sắp xếp các phần tử theo thứ tự giảm dần
         for (int i = 0; i < e; i++) {
             for (int j = i+1; j < e; j++) {
                 if (c[i] > c[j]) {
@@ -53,6 +61,7 @@ public class BAITAP_4 {
             }
         }
 
+        //in ra màn hình các phần tử của mảng c
         for (int i = 0; i < e; i++) {
             System.out.print(c[i] + " ");
         }

@@ -17,17 +17,27 @@ import java.util.Scanner;
 public class BAITAP_5 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+        //nhập n từ bàn phím và khai báo mảng a có kích thước n phần tử
+        System.out.print("Nhap kich thuoc cua mang: ");
         int n = sc.nextInt();
         int[] a = new int[n];
+
+        //nhập giá trị cho từng phần tử
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
+
+        //khởi tạo biến check = true
         boolean check = true;
+
+        //kiểm tra, nếu kết quả ra âm thì gán check = false
         for (int i = 2; i < n - 1; i++) {
             if ((a[i-1] - a[i-2]) * (a[i]-a[i-1]) <= 0) {
                 check = false;
             }
         }
+
+        //nếu check = true thì in ra màn hình YES. Ngược lại, nếu check = false thì in ra màn hình NO
         if (check) {
             System.out.print("YES");
         } else {
