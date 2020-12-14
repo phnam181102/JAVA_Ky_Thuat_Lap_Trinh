@@ -1,10 +1,9 @@
-import java.util.Scanner;
+//Ctrl + Alt + L
 
 public class TEST {
-    public static void main(String[]args) {
-        String greetings ="Hello";
-        String s = greetings.substring(1,4);
-        System.out.println(s);
-        
+    public static void main(String[] args) {
+        final int ARRAY_SIZE = 5;
+
+        System.out.println("size = " + ARRAY_SIZE);
     }
 }

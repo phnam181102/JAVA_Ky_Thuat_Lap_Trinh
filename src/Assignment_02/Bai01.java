@@ -10,14 +10,14 @@ public class Bai01 {
         int[] a = new int[n];
         System.out.println("");
 
-        for (int i = 0; i <n; i++) {
-            System.out.print("Nhap gia tri cho phan tu ["+i+"]: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print("Nhap gia tri cho phan tu [" + i + "]: ");
             a[i] = sc.nextInt();
         }
 
         boolean check = true;
 
-        if(n%2==0) {
+        if (n % 2 == 0) {
             check = false;
         }
 

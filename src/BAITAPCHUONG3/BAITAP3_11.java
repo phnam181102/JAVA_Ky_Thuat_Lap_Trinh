@@ -9,11 +9,11 @@ public class BAITAP3_11 {
         int n = sc.nextInt();
         int answer = 0;
         for (int i = 0; i < n; i++) {
-            if(i*i == n) {
+            if (i * i == n) {
                 answer++;
             }
         }
-        if (answer!=0) {
+        if (answer != 0) {
             System.out.println(n + " la so chinh phuong");
         } else {
             System.out.println(n + " khong phai la so chinh phuong");
