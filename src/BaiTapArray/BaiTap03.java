@@ -1,3 +1,5 @@
+package BaiTapArray;
+
 import java.util.Scanner;
 
 public class BaiTap03 {
