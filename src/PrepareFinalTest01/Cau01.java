@@ -82,14 +82,15 @@ public class Cau01 {
     static void cau1_6(int demSoChan, int n, int[] A, int[] B) {
         System.out.println("\nCau 1.6");
         int index = 0;
-        while (index <= demSoChan) {
-            for (int i = 0; i < n; i++) {
+        while (index < demSoChan) {
+            for (int i = 0; i < n - index; i++) {
                 if (A[i] % 2 == 0) {
                     B[index] = A[i];
-                    for (int j = i; j < n - 1; j++) {
-                        A[j] = A[j + 1];
+                    for (int j = i; j < n-index-1; j++) {
+                        A[j]=A[j+1];
                     }
                     index++;
+                    break;
                 }
             }
         }
