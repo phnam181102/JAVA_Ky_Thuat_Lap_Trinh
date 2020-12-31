@@ -1,4 +1,4 @@
-package BaiTapChuong6;
+package Practices04;
 
 import java.util.Scanner;
 
@@ -11,17 +11,17 @@ public class BaiTap6_4 {
             System.out.println("n khong hop le !!!");
         } else {
             System.out.print("Dang nhi phan cua "+n+ " la: ");
-            NhiPhan(n);
+            nhiPhan(n);
         }
     }
-    static void NhiPhan(int n) {
+    static void nhiPhan(int n) {
         int phanDu;
         if (n <= 1) {
             System.out.print(n);
             return;
         } else {
             phanDu = n%2;
-            NhiPhan(n >> 1);
+            nhiPhan(n >> 1);
             System.out.print(phanDu);
         }
     }

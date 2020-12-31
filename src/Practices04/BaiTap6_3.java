@@ -1,6 +1,5 @@
-package BaiTapChuong6;
+package Practices04;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class BaiTap6_3 {

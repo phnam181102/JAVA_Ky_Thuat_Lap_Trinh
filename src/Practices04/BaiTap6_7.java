@@ -1,4 +1,4 @@
-package BaiTapChuong6;
+package Practices04;
 
 import java.util.Scanner;
 

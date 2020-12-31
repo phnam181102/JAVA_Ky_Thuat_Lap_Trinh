@@ -1,23 +1,23 @@
-package BaiTapChuong6;
+package Practices04;
 
 import java.util.Scanner;
 
-public class BaiTap6_2 {
+public class BaiTap6_5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap so nguyen duong n: ");
         int n = sc.nextInt();
-        int result = P(n);
-
-        if (n <= 0) {
+        if (n<0) {
             System.out.println("\nn khong hop le!!!");
-        } else
-            System.out.println("\n"+result);
+        } else {
+            System.out.println("\n"+n+" co "+DemChuSo(n)+" chu so");
+        }
     }
-    static int P(int n) {
-        if (n == 0) {
+    static int DemChuSo(int n) {
+        if (n < 10) {
             return 1;
-        } else
-            return ((n*2+1)*P(n-1));
+        } else {
+            return 1 + DemChuSo(n/10);
+        }
     }
 }
