@@ -1,40 +1,28 @@
 //Ctrl + Alt + L
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class TEST {
+class Student {
+    private String name;
+    private int age;
+
+    public Student(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+    public void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+class Entry {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Nhap n: ");
-        int n = sc.nextInt();
-        int[] A = new int[n];
-        for (int i = 0; i < n; i++) {
-            A[i] = sc.nextInt();
-        }
-        System.out.print("\n\nCac phan tu xuat hien lap lai trong mang A la: ");
-        boolean check = false;
-        boolean check2 = true;
-        int[] B = new int[n];
-        int p = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (A[i] == A[j] && i != j) {
-                    check = true;
-                    for (int k = 0; k < n; k++) {
-                        if (A[i] == B[k]) {
-                            check2 = false;
-                        }
-                    }
-                    B[p] = A[i];
-                    p++;
-                }
-            }
-            if (check && check2) {
-                System.out.print(A[i] + " ");
-            }
-            check = false;
-            check2 = true;
-        }
+        Student s1 = new Student("Long", 24);
+        Student s2 = new Student("Kien", 29);
+        s1.display();
+        s2.display();
     }
 }
 
